@@ -55,9 +55,8 @@ namespace sdds {
 	}
 
 	Contact::Contact(const Contact& cnt) {
-		cout << "-----------------------------------------------------------\n";
-		cout << cnt.m_area << endl;
-		cout << (cnt.m_name == nullptr) << endl;
+		cout << cnt.m_area << endl; // <---- it has value comming from csv file
+		cout << (cnt.m_name == nullptr) << endl; // <---- it has not value. it is nullptre
 		if (cnt) {
 			set(cnt.m_name, cnt.m_area, cnt.m_exchangeCode, cnt.m_number);
 		}
